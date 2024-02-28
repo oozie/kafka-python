@@ -6,7 +6,8 @@ import platform
 import struct
 
 from kafka.vendor import six
-from kafka.vendor.six.moves import range
+# no-op in python3; this works-around py3.12 import issue
+#from kafka.vendor.six.moves import range
 
 _XERIAL_V1_HEADER = (-126, b'S', b'N', b'A', b'P', b'P', b'Y', 0, 1, 1)
 _XERIAL_V1_FORMAT = 'bccccccBii'
